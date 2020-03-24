@@ -1,15 +1,29 @@
 package com.example.hogwarts.domain.model.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+
+import javax.persistence.*;
 
 @Entity
+@Table(name = "transaction")
 public class Transaction {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     @ManyToOne
     private User author;
     private int points;
     @ManyToOne
     private User recipient;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public User getAuthor() {
         return author;

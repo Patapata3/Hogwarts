@@ -1,40 +1,47 @@
 package com.example.hogwarts.domain.model.valueObjects;
 
 public class Score {
-    private int Gryffindor;
-    private int Hufflepuff;
-    private int Ravenclaw;
-    private int Slytherin;
+    private int gryffindor;
+    private int hufflepuff;
+    private int ravenclaw;
+    private int slytherin;
+
+    public Score(int gryffindor, int hufflepuff, int ravenclaw, int slytherin) {
+        this.gryffindor = gryffindor;
+        this.hufflepuff = hufflepuff;
+        this.ravenclaw = ravenclaw;
+        this.slytherin = slytherin;
+    }
 
     public int getGryffindor() {
-        return Gryffindor;
+        return gryffindor;
     }
 
     public void setGryffindor(int gryffindor) {
-        Gryffindor = gryffindor;
+        this.gryffindor = gryffindor;
     }
 
     public int getHufflepuff() {
-        return Hufflepuff;
+        return hufflepuff;
     }
 
     public void setHufflepuff(int hufflepuff) {
-        Hufflepuff = hufflepuff;
+        this.hufflepuff = hufflepuff;
     }
 
     public int getRavenclaw() {
-        return Ravenclaw;
+        return ravenclaw;
     }
 
     public void setRavenclaw(int ravenclaw) {
-        Ravenclaw = ravenclaw;
+        this.ravenclaw = ravenclaw;
     }
 
     public int getSlytherin() {
-        return Slytherin;
+        return slytherin;
     }
 
     public void setSlytherin(int slytherin) {
-        Slytherin = slytherin;
+        this.slytherin = slytherin;
     }
 }
