@@ -18,7 +18,7 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity addUser(User user) {
-        if (userService.getByLogin(user.getLogin()) != null)
+        if (userService.getByLogin(user.getLogin()).isPresent())
             return new ResponseEntity<String>("User with this login already exists", HttpStatus.BAD_REQUEST);
 
 
